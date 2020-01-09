@@ -9,6 +9,8 @@ declare global {
     }
 }
 
+const AZURE_BOT_SERVICE_SECRET = "PLKN8x6d_Yw.fMe325H_yjTqPCDzs23JE6jiKmu1jXuq3vN3Eurmdkk";
+
 window.WebChat = window.WebChat || {};
 
 @Component({
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit {
 
     public ngOnInit(): void {
         const directLine = window.WebChat.createDirectLine({
-            secret: "<YourSecretHere>",
+            secret: AZURE_BOT_SERVICE_SECRET,
             webSocket: false
         });
 
